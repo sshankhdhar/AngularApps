@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- PROJECTS LIST -->
+  <h1>{{ PrimaryColor }}</h1>
+  <div class="col-50">
+    <app-projects-list
+      [projects]="projects$ | async"
+      (selected)="selectProject($event)"
+      (deleted)="deleteProject($event)"
+    ></app-projects-list>
+  </div>
+  <!-- PROJECT DETAILS -->
+  <div class="col-50">
+    <app-projects-details
+      [project]="selectedProject"
+      (saved)="saveProject($event)"
+      (cancelled)="cancel($event)"
+    >
+    </app-projects-details>
+  </div>
+</div>
