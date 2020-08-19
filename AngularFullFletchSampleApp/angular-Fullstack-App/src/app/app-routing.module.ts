@@ -6,8 +6,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
 
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent , pathMatch: 'full'},
-  { path: 'authorize', component: AuthorizeComponent},
+  { path: '', component: AuthorizeComponent, pathMatch: 'full'},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'documentation', component:  DocumentationComponent}
 ];

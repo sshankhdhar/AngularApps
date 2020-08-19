@@ -8,6 +8,7 @@ import { DocumentationComponent } from './documentation/documentation.component'
 import { AuthorizeComponent } from './authorize/authorize.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { ChartModule } from './charts/charts.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    ChartModule,
     BrowserAnimationsModule
   ],
   providers: [],

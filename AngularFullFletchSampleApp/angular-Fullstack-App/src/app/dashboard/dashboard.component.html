@@ -1,7 +1,74 @@
+<mat-toolbar color="primary">
+  <span>Dashboard</span>
+</mat-toolbar>
 
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>1seeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-</mat-grid-list>
+<div class="container-lg mx-md-0" style="max-width: 100%;">
+  <form>
+    <div class="form-row mt-2">
+      <div class="col">
+        <label for="FromDate">From Date</label>
+        <input type="date" id= "FromDate" class="form-control" value="12-03-2019"placeholder="From Date">
+      </div>
+      <div class="col">
+        <label for="ToDate">To Date</label>
+        <input type="date" id="ToDate" class="form-control" placeholder="To Date">
+      </div>
+      <div class="col">
+        <button type="submit" class="btn btn-primary ml-2 mr-2 mt-4" >Sign in</button>
+        <button  class="btn btn-warning mt-4">Cancel</button>
+      </div>
+    </div>
+  </form>
+      <div class="card mb-2 mt-2">
+          <div class="card-header">
+            Request Summary
+          </div>
+          <div class="card-body">
+            <div class="row">
+            <div class="col-lg-6 ">
+              <app-pie-chart [inputLabel]="requestLabel1" [inputData]="requestData1"></app-pie-chart>
+            </div>
+            <div class="col-lg-6">
+              <app-pie-chart [inputLabel]="requestLabel2" [inputData]="requestData2"></app-pie-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              EPOC
+            </div>
+            <div class="card-body">
+                <app-pie-chart [inputLabel]="epocLabel" [inputData]="epocData"></app-pie-chart></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              Officewise Request
+            </div>
+            <div class="card-body">
+                <app-bar-chart></app-bar-chart></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <app-pie-chart></app-pie-chart>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-pie-chart></app-pie-chart>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-pie-chart></app-pie-chart>
+  </mat-grid-tile>
+  <mat-grid-tile>
+
+  </mat-grid-tile>
+</mat-grid-list> -->
